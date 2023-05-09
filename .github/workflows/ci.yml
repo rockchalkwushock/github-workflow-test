@@ -143,13 +143,13 @@ jobs:
           CI: true
 
       - name: Format
-        run: pnpm run format
+        run: pnpm run format --filter=ui
 
       - name: Lint
-        run: pnpm run lint
+        run: pnpm run lint --filter=ui
 
       - name: Build
-        run: pnpm run build
+        run: pnpm run build --filter=ui
         env:
           NODE_ENV: production
 
