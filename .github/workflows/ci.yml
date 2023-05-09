@@ -23,7 +23,6 @@ jobs:
         uses: dorny/paths-filter@v2
         id: filter
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           filters: |
             apps-docs:
               - apps/docs/**
