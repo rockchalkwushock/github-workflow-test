@@ -38,7 +38,7 @@ jobs:
 
   apps-docs:
     needs: detect-changes
-    if: ${{ needs.detect-changes.outputs.apps.docs == 'true' }}
+    if: ${{ needs.detect-changes.outputs.apps-docs == 'true' }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: true
@@ -155,7 +155,7 @@ jobs:
 
   apps-web:
     needs: detect-changes
-    if: ${{ needs.detect-changes.outputs.apps.web == 'true' }}
+    if: ${{ needs.detect-changes.outputs.apps-web == 'true' }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: true
