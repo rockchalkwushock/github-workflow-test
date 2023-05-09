@@ -67,7 +67,7 @@ jobs:
           CI: true
 
       - name: Build
-        run: pnpm run build
+        run: pnpm run build --filter=docs
         env:
           NODE_ENV: production
 
@@ -102,13 +102,13 @@ jobs:
           CI: true
 
       - name: Format
-        run: pnpm run format
+        run: pnpm run format --filter=eslint-config-custom
 
       - name: Lint
-        run: pnpm run lint
+        run: pnpm run lint --filter=eslint-config-custom
 
       - name: Build
-        run: pnpm run build
+        run: pnpm run build --filter=eslint-config-custom
         env:
           NODE_ENV: production
 
@@ -184,6 +184,6 @@ jobs:
           CI: true
 
       - name: Build
-        run: pnpm run build
+        run: pnpm run build --filter=web
         env:
           NODE_ENV: production
