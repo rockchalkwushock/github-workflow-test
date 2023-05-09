@@ -19,6 +19,8 @@ jobs:
       pkg-ui: ${{ steps.filter.outputs.packages.ui }}
       apps-web: ${{ steps.filter.outputs.apps.web }}
     steps:
+      - uses: actions/checkout@v3
+
       - name: "Detect Changes in Mono Repo"
         uses: dorny/paths-filter@v2
         id: filter
