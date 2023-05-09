@@ -32,7 +32,7 @@ jobs:
               - packages/eslint-config/**
             pkg-ui:
               - packages/ui/**
-          token: ${{ github.token }}
+          token: ${{ secrets.ACCESS_TOKEN }}
 
   apps-docs:
     needs: detect-changes
