@@ -14,10 +14,10 @@ jobs:
     permissions:
       pull-requests: read
     outputs:
-      apps-docs: ${{ steps.filter.outputs.apps.docs }}
-      pkg-eslint-config: ${{ steps.filter.outputs.packages.eslint-config }}
-      pkg-ui: ${{ steps.filter.outputs.packages.ui }}
-      apps-web: ${{ steps.filter.outputs.apps.web }}
+      apps-docs: ${{ steps.filter.outputs.apps-docs }}
+      apps-web: ${{ steps.filter.outputs.apps-web }}
+      pkg-eslint-config: ${{ steps.filter.outputs.pkg-eslint-config }}
+      pkg-ui: ${{ steps.filter.outputs.pkg-ui }}
     steps:
       - uses: actions/checkout@v3
 
